@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="0" failures="0" time="0.001" name="github.com/mattermost/mattermost-server/api4">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/app">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.017" name="github.com/mattermost/mattermost-server/cmd/mattermost/commands">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/config">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/migrations">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.001" name="github.com/mattermost/mattermost-server/mlog">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/model">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/plugin">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.040" name="github.com/mattermost/mattermost-server/plugin/checker">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.002" name="github.com/mattermost/mattermost-server/plugin/plugintest">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.001" name="github.com/mattermost/mattermost-server/services/filesstore">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/services/httpservice">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003" name="github.com/mattermost/mattermost-server/services/imageproxy">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/services/mailservice">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/services/mfa">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.010" name="github.com/mattermost/mattermost-server/services/timezones">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/store/localcachelayer">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="1" time="0.000" name="github.com/mattermost/mattermost-server/store/sqlstore">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+		<testcase classname="sqlstore" name="[build failed]" time="0.000">
+			<failure message="Failed" type=""></failure>
+		</testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.001" name="github.com/mattermost/mattermost-server/utils">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/utils/fileutils">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.001" name="github.com/mattermost/mattermost-server/utils/imgutils">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003" name="github.com/mattermost/mattermost-server/utils/jsonutils">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/utils/markdown">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000" name="github.com/mattermost/mattermost-server/web">
+		<properties>
+			<property name="go.version" value="go1.12"></property>
+		</properties>
+	</testsuite>
+</testsuites>
