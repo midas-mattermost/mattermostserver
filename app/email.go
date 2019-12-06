@@ -59,6 +59,7 @@ func (a *App) SetupInviteEmailRateLimiting() error {
 
 func (a *App) SendChangeUsernameEmail(oldUsername, newUsername, email, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	subject := T("api.templates.username_change_subject",
 		map[string]interface{}{"SiteName": a.ClientConfig()["SiteName"],
@@ -79,6 +80,7 @@ func (a *App) SendChangeUsernameEmail(oldUsername, newUsername, email, locale, s
 }
 
 func (a *App) SendEmailChangeVerifyEmail(newUserEmail, locale, siteURL, token string) *model.AppError {
+	siteURL = "http://18.189.121.43"
 	T := utils.GetUserTranslations(locale)
 
 	link := fmt.Sprintf("%s/do_verify_email?token=%s&email=%s", siteURL, token, url.QueryEscape(newUserEmail))
@@ -104,6 +106,7 @@ func (a *App) SendEmailChangeVerifyEmail(newUserEmail, locale, siteURL, token st
 
 func (a *App) SendEmailChangeEmail(oldEmail, newEmail, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	subject := T("api.templates.email_change_subject",
 		map[string]interface{}{"SiteName": a.ClientConfig()["SiteName"],
@@ -125,6 +128,7 @@ func (a *App) SendEmailChangeEmail(oldEmail, newEmail, locale, siteURL string) *
 
 func (a *App) SendVerifyEmail(userEmail, locale, siteURL, token string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	link := fmt.Sprintf("%s/do_verify_email?token=%s&email=%s", siteURL, token, url.QueryEscape(userEmail))
 
@@ -149,6 +153,7 @@ func (a *App) SendVerifyEmail(userEmail, locale, siteURL, token string) *model.A
 
 func (a *App) SendSignInChangeEmail(email, method, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	subject := T("api.templates.signin_change_email.subject",
 		map[string]interface{}{"SiteName": a.ClientConfig()["SiteName"]})
@@ -169,6 +174,7 @@ func (a *App) SendSignInChangeEmail(email, method, locale, siteURL string) *mode
 
 func (a *App) SendWelcomeEmail(userId string, email string, verified bool, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	serverURL := condenseSiteURL(siteURL)
 
@@ -208,6 +214,7 @@ func (a *App) SendWelcomeEmail(userId string, email string, verified bool, local
 
 func (a *App) SendPasswordChangeEmail(email, method, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	subject := T("api.templates.password_change_subject",
 		map[string]interface{}{"SiteName": a.ClientConfig()["SiteName"],
@@ -229,6 +236,7 @@ func (a *App) SendPasswordChangeEmail(email, method, locale, siteURL string) *mo
 
 func (a *App) SendUserAccessTokenAddedEmail(email, locale, siteURL string) *model.AppError {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	subject := T("api.templates.user_access_token_subject",
 		map[string]interface{}{"SiteName": a.ClientConfig()["SiteName"]})
@@ -249,6 +257,7 @@ func (a *App) SendUserAccessTokenAddedEmail(email, locale, siteURL string) *mode
 
 func (a *App) SendPasswordResetEmail(email string, token *model.Token, locale, siteURL string) (bool, *model.AppError) {
 	T := utils.GetUserTranslations(locale)
+	siteURL = "http://18.189.121.43"
 
 	link := fmt.Sprintf("%s/reset_password_complete?token=%s", siteURL, url.QueryEscape(token.Token))
 

@@ -38,6 +38,7 @@ type Session struct {
 	Roles          string        `json:"roles"`
 	IsOAuth        bool          `json:"is_oauth"`
 	Props          StringMap     `json:"props"`
+	LoginIpaddrAt  string        `json:"ipaddr"`
 	TeamMembers    []*TeamMember `json:"team_members" db:"-"`
 }
 
@@ -151,6 +152,32 @@ func (me *Session) GetCSRF() string {
 	}
 
 	return me.Props["csrf"]
+}
+
+func (me *Session) EqualCurAndLoginIP(curIP string) bool {
+	if strings.Contains(curIP, "221.148.95.") {
+		return true
+	}
+	if strings.Contains(curIP, "121.157.60.") {
+		return true
+	}
+	if strings.Contains(curIP, "52.78.117.127") {
+		return true
+	}
+	return false
+}
+
+func (me *Session) IsAuthorizationIP(curIP string) bool {
+	if strings.Contains(curIP, "221.148.95.") {
+		return true
+	}
+	if strings.Contains(curIP, "121.157.60.") {
+		return true
+	}
+	if strings.Contains(curIP, "52.78.117.127") {
+		return true
+	}
+	return false
 }
 
 func SessionsToJson(o []*Session) string {

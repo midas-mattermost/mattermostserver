@@ -205,6 +205,12 @@ func uploadFileStream(c *Context, w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	if !c.App.Session.IsAuthorizationIP(c.App.IpAddress) {
+		c.Err = model.NewAppError("uploadFileStream",
+			"api.file.attachments.unathorizationIP",
+			nil, "", http.StatusUnauthorized)
+	}
+
 	timestamp := time.Now()
 	var fileUploadResponse *model.FileUploadResponse
 
@@ -518,6 +524,13 @@ func uploadFileMultipartLegacy(c *Context, mr *multipart.Reader,
 
 func getFile(c *Context, w http.ResponseWriter, r *http.Request) {
 	c.RequireFileId()
+
+	if !c.App.Session.IsAuthorizationIP(c.App.IpAddress) {
+		c.Err = model.NewAppError("getFile",
+			"api.file.download.unathorizationIP",
+			nil, "", http.StatusUnauthorized)
+	}
+
 	if c.Err != nil {
 		return
 	}
